@@ -7,10 +7,10 @@ const io = new Server(server);
 app.use(express.static('public'));
 
 
- let user=0;
+ //let user=0;
 io.on('connection', (socket) => {
-    user++;
-  console.log('user number',user);
+    //user++;
+  //console.log('user number',user);
   //received data 
   socket.on("beginPath",(data)=>{
     io.sockets.emit("beginPath",data);
